@@ -1,4 +1,4 @@
-ARG HUGO_VERSION="v0.56.2"
+ARG HUGO_VERSION="master"
 
 FROM golang:1.12-alpine AS builder
 
@@ -35,6 +35,8 @@ WORKDIR /site
 
 ENTRYPOINT [ "hugo" ]
 
-LABEL org.opencontainers.image.url="https://github.com/westonsteimel/docker-hugo" \ 
+LABEL org.opencontainers.image.title="hugo" \
+    org.opencontainers.image.description="hugo in Docker" \  
+    org.opencontainers.image.url="https://github.com/westonsteimel/docker-hugo" \ 
     org.opencontainers.image.source="https://github.com/westonsteimel/docker-hugo" \
     org.opencontainers.image.version="${HUGO_VERSION}"
