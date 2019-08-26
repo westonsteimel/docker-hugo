@@ -39,4 +39,5 @@ LABEL org.opencontainers.image.title="hugo" \
     org.opencontainers.image.description="hugo in Docker" \  
     org.opencontainers.image.url="https://github.com/westonsteimel/docker-hugo" \ 
     org.opencontainers.image.source="https://github.com/westonsteimel/docker-hugo" \
-    org.opencontainers.image.version="${HUGO_VERSION}"
+    org.opencontainers.image.version="${HUGO_VERSION}" \
+    version="${HUGO_VERSION}"
