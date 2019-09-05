@@ -1,6 +1,6 @@
-ARG HUGO_VERSION="v0.57.2"
+ARG HUGO_VERSION="v0.58.0"
 
-FROM golang:1.12-alpine AS builder
+FROM golang:1.13-alpine AS builder
 
 ARG HUGO_VERSION
 ENV CGO_ENABLED=0
