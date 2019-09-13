@@ -1,4 +1,4 @@
-ARG HUGO_VERSION="v0.58.1"
+ARG HUGO_VERSION="v0.58.2"
 
 FROM golang:1.13-alpine AS builder
 
