@@ -22,7 +22,9 @@ RUN apk add --no-cache \
 RUN git clone --depth 1 --branch "${GIT_REF}" https://github.com/gohugoio/hugo.git \
     && cd hugo \
     && go install -ldflags '-s -w' \
-    && addgroup hugo \
+    && if [$TARGETPLATFORM = "linux/amd64"]; then apk add --no-cache upx && upx --lzma --best /go/bin/hugo; fi
+
+RUN addgroup hugo \
     && adduser -G hugo -s /bin/sh -D hugo
 
 FROM scratch
